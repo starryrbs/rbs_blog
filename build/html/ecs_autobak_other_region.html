@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>一、背景 &mdash; RBS&#39;s BLOG 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="一、背景" href="cdb_upload_cos.html" />
+    <link rel="prev" title="Welcome to RBS Blog’s documentation!" href="index.html" />
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> RBS's BLOG
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Python实现ECS自动镜像创建&amp;镜像复制至其他地域:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">一、背景</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1.1 问题：</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">1.2 思路：</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#id4">二、代码</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id5">2.1 结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">2.2 核心代码</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#id7">三、测试</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id8">3.1 查看运行结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#web">3.2 查看web控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">3.3 查看日志</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#id10">四、优化</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python实现腾讯云CDB备份文件自动上传到COS:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cdb_upload_cos.html">一、背景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cdb_upload_cos.html#id2">二、技术细节</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cdb_upload_cos.html#id3">三、代码</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cdb_upload_cos.html#id6">四、测试结果</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cdb_upload_cos.html#id7">五、总结</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RBS's BLOG</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>一、背景</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/ecs_autobak_other_region.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id1" id="id11">一、背景</a><ul>
+<li><a class="reference internal" href="#id2" id="id12">1.1 问题：</a></li>
+<li><a class="reference internal" href="#id3" id="id13">1.2 思路：</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4" id="id14">二、代码</a><ul>
+<li><a class="reference internal" href="#id5" id="id15">2.1 结构</a></li>
+<li><a class="reference internal" href="#id6" id="id16">2.2 核心代码</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7" id="id17">三、测试</a><ul>
+<li><a class="reference internal" href="#id8" id="id18">3.1 查看运行结果</a></li>
+<li><a class="reference internal" href="#web" id="id19">3.2 查看web控制台</a></li>
+<li><a class="reference internal" href="#id9" id="id20">3.3 查看日志</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10" id="id21">四、优化</a></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h1><a class="toc-backref" href="#id11">一、背景</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id12">1.1 问题：</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>同事反馈有可以鉴于目前几次大的公有云事故，腾讯云/阿里云两大公有云厂商尚且存在这样令人触目惊心的时刻，更何况其他厂商和我们的日常操作，有人的地方就有误操作，百分之一的风险但如果一旦发生就是100%的问题，虽SLA但或多或少存在影响，客户反馈如果阿里的A地域发生故障，例如地质灾害或不可控因素引发的ecs无法访问，用户数据都在云上无法操作情况下该如何，但考虑到不同地域灾备的高额度IT成本，想采用每天ecs的冷备。</p>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id13">1.2 思路：</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>在最大程度的降低IT成本，又想在不可控大规模地域性灾难面前做些什么，每天凌晨业务低峰期对ECS制作镜像，同时复制到其他的不同地域，如北京的镜像复制到上海，当北京整个region异常情况下，可利用复制在目标地域的ECS创建出来，在此抛砖引玉，后续可以将ecs在目标地域开出来并关机，归档删除之前的镜像，等等。同样可以将RDS备份也同样备份到异地OSS内，目前阿里已经有EBS非常方便的灾难情况下恢复RDS。利用此思路同意的适用于其他场景下。</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h1><a class="toc-backref" href="#id14">二、代码</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id15">2.1 结构</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p><img alt="image0" src="http://i2.51cto.com/images/blog/201807/26/5baa365bde3803c1dc069ffe253f9da0.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=" />
+如果多个实例可同时写入配置文件，用,进行分割。</p>
+<p><a class="reference external" href="https://github.com/redhatxl/my-python-code/tree/master/imageoper">github地址</a></p>
+</div>
+<div class="section" id="id6">
+<h2><a class="toc-backref" href="#id16">2.2 核心代码</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>&gt; 配置文件</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 阿里云ak配置，建议采用子账户只授权ecs镜像操作</span>
+<span class="p">[</span><span class="n">common</span><span class="p">]</span>
+<span class="c1"># 阿里云acccesskeyid</span>
+<span class="n">accessKeyId</span> <span class="o">=</span> <span class="n">LTAIhfXlcjyln6tW</span>
+<span class="c1"># 阿里云accesssecret</span>
+<span class="n">accessSecret</span> <span class="o">=</span> <span class="n">GwfAMvR4K2ELmt76184oqLTVgRfAso</span>
+<span class="c1"># log目录名称</span>
+<span class="n">logdir_name</span> <span class="o">=</span> <span class="n">logdir</span>
+<span class="c1"># log文件名称</span>
+<span class="n">logfile_name</span> <span class="o">=</span> <span class="n">ecsoperlog</span><span class="o">.</span><span class="n">log</span>
+
+<span class="c1"># ecs源地域配置信息段</span>
+<span class="c1">#支持在华北 1、华北 2、华北 3、华北 5、华东 1、华东 2 和华南 1 地域之间复制镜像。涉及其他国家和地区地域时，可以 提交工单 申请</span>
+<span class="p">[</span><span class="n">source</span><span class="p">]</span>
+<span class="c1"># 源地域实例regionid，可以参考：https://help.aliyun.com/document_detail/40654.html?spm=a2c1g.8271268.10000.5.5f98df25B98bhJ</span>
+<span class="n">s_RegionId</span> <span class="o">=</span> <span class="n">cn</span><span class="o">-</span><span class="n">shanghai</span>
+
+<span class="c1"># 源实例id,可指定多个用，进行分隔</span>
+<span class="n">s_InstanceId</span> <span class="o">=</span>  <span class="n">i</span><span class="o">-</span><span class="n">uf661wb708uvqc9jyhem</span><span class="p">,</span><span class="n">i</span><span class="o">-</span><span class="n">uf661wb708uvqc9jyhel</span>
+
+<span class="c1"># 源端制作镜像name</span>
+<span class="n">s_ImageName</span> <span class="o">=</span> <span class="n">api</span><span class="o">-</span><span class="n">source</span><span class="o">-</span><span class="n">image</span>
+
+<span class="c1"># 源镜像描述信息</span>
+<span class="n">s_Description</span> <span class="o">=</span> <span class="n">api</span><span class="o">-</span><span class="n">source</span><span class="o">-</span><span class="n">image源镜像描述信息</span>
+
+<span class="c1"># 镜像复制目的地域配置信息段</span>
+<span class="p">[</span><span class="n">destination</span><span class="p">]</span>
+<span class="c1"># 目的地域实例regionid，</span>
+<span class="n">d_DestinationRegionId</span> <span class="o">=</span> <span class="n">cn</span><span class="o">-</span><span class="n">qingdao</span>
+
+<span class="c1"># 复制过来的镜像名称</span>
+<span class="n">d_DestinationImageName</span> <span class="o">=</span> <span class="n">api</span><span class="o">-</span><span class="n">destination</span><span class="o">-</span><span class="n">image</span>
+
+<span class="c1"># 复制过来的镜像描述信息</span>
+<span class="n">d_DestinationDescription</span> <span class="o">=</span> <span class="n">api</span><span class="o">-</span><span class="n">destination</span><span class="o">-</span><span class="n">image目的镜像描述信息</span>
+
+<span class="n">image操作</span><span class="p">(</span><span class="n">制作镜像</span><span class="o">-&gt;</span><span class="n">查看镜像制作状态</span><span class="o">-&gt;</span><span class="n">复制镜像</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="c1"># 创建实例生成器</span>
+   <span class="k">def</span> <span class="nf">_get_Instance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+       <span class="k">for</span> <span class="n">Instance</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">s_InstanceId_list</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">):</span>
+           <span class="k">yield</span> <span class="n">Instance</span>
+
+   <span class="k">def</span> <span class="nf">_create_image</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+       <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">       创建镜像</span>
+<span class="sd">       :return:返回镜像id</span>
+<span class="sd">       &quot;&quot;&quot;</span>
+       <span class="n">s_timer</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">-%H:%M&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()))</span>
+       <span class="n">request</span> <span class="o">=</span> <span class="n">CreateImageRequest</span><span class="o">.</span><span class="n">CreateImageRequest</span><span class="p">()</span>
+       <span class="n">request</span><span class="o">.</span><span class="n">set_accept_format</span><span class="p">(</span><span class="s1">&#39;json&#39;</span><span class="p">)</span>
+       <span class="n">request</span><span class="o">.</span><span class="n">add_query_param</span><span class="p">(</span><span class="s1">&#39;RegionId&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">s_RegionId</span><span class="p">)</span>
+       <span class="n">request</span><span class="o">.</span><span class="n">add_query_param</span><span class="p">(</span><span class="s1">&#39;InstanceId&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">s_InstanceId</span><span class="p">)</span>
+       <span class="n">request</span><span class="o">.</span><span class="n">add_query_param</span><span class="p">(</span><span class="s1">&#39;ImageName&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">s_ImageName</span> <span class="o">+</span> <span class="n">s_timer</span><span class="p">)</span>
+       <span class="n">request</span><span class="o">.</span><span class="n">add_query_param</span><span class="p">(</span><span class="s1">&#39;Description&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">s_Description</span> <span class="o">+</span> <span class="n">s_timer</span><span class="p">)</span>
+       <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ecshelper</span><span class="o">.</span><span class="n">do_action_with_exception</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">logoper</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;创建镜像任务已提交,镜像id:</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">)[</span><span class="s2">&quot;ImageId&quot;</span><span class="p">])</span>
+       <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;创建镜像任务已提交,镜像id:</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">)[</span><span class="s2">&quot;ImageId&quot;</span><span class="p">])</span>
+       <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">)[</span><span class="s2">&quot;ImageId&quot;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">_describe_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">imageid</span><span class="p">):</span>
+       <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">       查询image状态</span>
+<span class="sd">       :param imageid:</span>
+<span class="sd">       :return:</span>
+<span class="sd">       &quot;&quot;&quot;</span>
+       <span class="n">request</span> <span class="o">=</span> <span class="n">DescribeImagesRequest</span><span class="o">.</span><span class="n">DescribeImagesRequest</span><span class="p">()</span>
+       <span class="n">request</span><span class="o">.</span><span class="n">set_accept_format</span><span class="p">(</span><span class="s1">&#39;json&#39;</span><span class="p">)</span>
+       <span class="n">request</span><span class="o">.</span><span class="n">add_query_param</span><span class="p">(</span><span class="s1">&#39;RegionId&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">s_RegionId</span><span class="p">)</span>
+       <span class="n">request</span><span class="o">.</span><span class="n">add_query_param</span><span class="p">(</span><span class="s1">&#39;ImageId&#39;</span><span class="p">,</span> <span class="n">imageid</span><span class="p">)</span>
+       <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ecshelper</span><span class="o">.</span><span class="n">do_action_with_exception</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+       <span class="c1"># 进度 json.loads(response)[&#39;Images&#39;][&#39;Image&#39;][0][&#39;Progress&#39;]</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">logoper</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;镜像创建进度:</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">)[</span><span class="s1">&#39;Images&#39;</span><span class="p">][</span><span class="s1">&#39;Image&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Progress&#39;</span><span class="p">])</span>
+       <span class="c1"># 镜像状态</span>
+       <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">)[</span><span class="s1">&#39;Images&#39;</span><span class="p">][</span><span class="s1">&#39;Image&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Status&#39;</span><span class="p">]</span>
+
+
+   <span class="c1">#镜像复制</span>
+   <span class="k">def</span> <span class="nf">_copy_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">imageid</span><span class="p">):</span>
+       <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">       镜像复制</span>
+<span class="sd">       :param imageid:源镜像id</span>
+<span class="sd">       :return: 复制成功后的镜像id</span>
+<span class="sd">       &quot;&quot;&quot;</span>
+       <span class="n">flag</span> <span class="o">=</span> <span class="kc">True</span>
+       <span class="k">while</span> <span class="n">flag</span><span class="p">:</span>
+           <span class="k">try</span><span class="p">:</span>
+               <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_describe_image</span><span class="p">(</span><span class="n">imageid</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Available&#39;</span><span class="p">:</span>
+                   <span class="n">flag</span> <span class="o">=</span> <span class="kc">False</span>
+               <span class="k">else</span><span class="p">:</span>
+                   <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+           <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+               <span class="k">pass</span>
+       <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;镜像已经创建完成&#39;</span><span class="p">)</span>
+       <span class="n">d_timer</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">-%H:%M&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()))</span>
+       <span class="n">request</span> <span class="o">=</span> <span class="n">CopyImageRequest</span><span class="o">.</span><span class="n">CopyImageRequest</span><span class="p">()</span>
+       <span class="n">request</span><span class="o">.</span><span class="n">set_accept_format</span><span class="p">(</span><span class="s1">&#39;json&#39;</span><span class="p">)</span>
+       <span class="n">request</span><span class="o">.</span><span class="n">add_query_param</span><span class="p">(</span><span class="s1">&#39;RegionId&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">s_RegionId</span><span class="p">)</span>
+       <span class="n">request</span><span class="o">.</span><span class="n">add_query_param</span><span class="p">(</span><span class="s1">&#39;DestinationRegionId&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">d_DestinationRegionId</span><span class="p">)</span>
+       <span class="n">request</span><span class="o">.</span><span class="n">add_query_param</span><span class="p">(</span><span class="s1">&#39;DestinationImageName&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">d_DestinationImageName</span> <span class="o">+</span> <span class="n">d_timer</span><span class="p">)</span>
+       <span class="n">request</span><span class="o">.</span><span class="n">add_query_param</span><span class="p">(</span><span class="s1">&#39;DestinationDescription&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">d_DestinationDescription</span> <span class="o">+</span> <span class="n">d_timer</span><span class="p">)</span>
+       <span class="n">request</span><span class="o">.</span><span class="n">add_query_param</span><span class="p">(</span><span class="s1">&#39;ImageId&#39;</span><span class="p">,</span> <span class="n">imageid</span><span class="p">)</span>
+       <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ecshelper</span><span class="o">.</span><span class="n">do_action_with_exception</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">logoper</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;复制镜像任务已提交,镜像id:</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">)[</span><span class="s1">&#39;ImageId&#39;</span><span class="p">])</span>
+       <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;复制镜像任务已提交,镜像id:</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">)[</span><span class="s1">&#39;ImageId&#39;</span><span class="p">])</span>
+       <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">)[</span><span class="s1">&#39;ImageId&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h1><a class="toc-backref" href="#id17">三、测试</a><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id8">
+<h2><a class="toc-backref" href="#id18">3.1 查看运行结果</a><a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p><img alt="image1" src="http://i2.51cto.com/images/blog/201807/26/2c47ad17822e00f55b4d44bad6f34170.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=" /></p>
+</div>
+<div class="section" id="web">
+<h2><a class="toc-backref" href="#id19">3.2 查看web控制台</a><a class="headerlink" href="#web" title="Permalink to this headline">¶</a></h2>
+<p>&gt; 源镜像</p>
+<p><img alt="image2" src="http://i2.51cto.com/images/blog/201807/25/151498a184d482c398c7466bd9fd1bee.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=" /> &gt; 添加了时间戳，方便查看</p>
+<p><img alt="image3" src="http://i2.51cto.com/images/blog/201807/25/d0794a752612c927d336470dec5097cf.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=" /> &gt; 目的地域镜像</p>
+<p><img alt="image4" src="http://i2.51cto.com/images/blog/201807/25/6a585802e06a4c2d2c27d1034582cac2.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=" /></p>
+</div>
+<div class="section" id="id9">
+<h2><a class="toc-backref" href="#id20">3.3 查看日志</a><a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p><img alt="image5" src="http://i2.51cto.com/images/blog/201807/26/28d08832853a260d5450fcd92e5d4b08.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=" /></p>
+</div>
+</div>
+<div class="section" id="id10">
+<h1><a class="toc-backref" href="#id21">四、优化</a><a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>可以后续增加对指定天数的镜像进行归档删除</li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cdb_upload_cos.html" class="btn btn-neutral float-right" title="一、背景" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to RBS Blog’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, RBS
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
